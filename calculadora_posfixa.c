@@ -1,6 +1,6 @@
-/**UnB - Universidade de Brasília**/
+/**UnB - Universidade de BrasÃ­lia**/
 /**Estudante: Victor Gabriel Rodrigues de Almeida**/
-/**Matrícula: 14/0052399**/
+/**MatrÃ­cula: 14/0052399**/
 
 
 
@@ -180,10 +180,10 @@ void imprimirPilhaChar(t_pilha *p){
 
 
 /********************************************************************************************************/
-/***************************************** --- Operações --- ********************************************/
+/***************************************** --- OperaÃ§Ãµes --- ********************************************/
 /********************************************************************************************************/
 
-/**Funçao que lê expressao apenas com caracteres e salva em uma lista**/
+/**FunÃ§ao que lÃª expressao apenas com caracteres e salva em uma lista**/
 t_lista *lerExpressao(){
     char n;
     t_lista *expressao = criarLista();
@@ -201,7 +201,7 @@ t_lista *lerExpressao(){
     return expressao;
 }
 
-/**Funçao auxiliar para andar numeros (caractere) da lista (é usada na funçao listaCharNum)**/
+/**FunÃ§ao auxiliar para andar numeros (caractere) da lista (Ã© usada na funÃ§ao listaCharNum)**/
 int passaNum(t_elemento *num){
     while(num!=NULL){
         if(num->sim == '0' || num->sim == '1' || num->sim == '2' || num->sim == '3' || num->sim == '4' || num->sim == '5' || num->sim == '6' || num->sim == '7' || num->sim == '8' || num->sim == '9'){
@@ -215,7 +215,7 @@ int passaNum(t_elemento *num){
     return num;
 }
 
-/**Funçao que retorna numero (double)**/
+/**FunÃ§ao que retorna numero (double)**/
 double pegaNum(t_elemento *num){
     char numero[50];
     t_elemento *atual = num;
@@ -243,7 +243,7 @@ double pegaNum(t_elemento *num){
     return valor;
 }
 
-/**Funçao que reorganiza a expressao, de forma a facilitar calculo**/
+/**FunÃ§ao que reorganiza a expressao, de forma a facilitar calculo**/
 void reorganizarExpressao(t_lista *l){
     t_elemento *excluido = l->primeiro;
     t_elemento *anterior;
@@ -377,7 +377,7 @@ void reorganizarExpressao(t_lista *l){
     }
 }
 
-/**Funçao que transforma a lista interamente de chars em lista com doubles e chars**/
+/**FunÃ§ao que transforma a lista interamente de chars em lista com doubles e chars**/
 int listaCharNum(t_lista *l){
 
     t_lista *equacao = criarLista();
@@ -421,7 +421,7 @@ int listaCharNum(t_lista *l){
     return equacao;
 }
 
-/**Funçao que checa a validade da expressao**/
+/**FunÃ§ao que checa a validade da expressao**/
 int checarValidade(t_lista *expressao){
     t_pilha *pilha = criarPilha();
     t_elemento *caractere = expressao->primeiro;
@@ -515,7 +515,7 @@ int checarValidade(t_lista *expressao){
     }
 }
 
-/**Funçao que imprime equação com doubles e chars**/
+/**FunÃ§ao que imprime equaÃ§Ã£o com doubles e chars**/
 void imprimirEq(t_lista *l){
     t_elemento *atual = l->primeiro;
 
@@ -531,7 +531,7 @@ void imprimirEq(t_lista *l){
     printf("\n");
 }
 
-/**Função que retorna a prioridade de um operador**/
+/**FunÃ§Ã£o que retorna a prioridade de um operador**/
 int prioridadeOperador(char p){
     int pri = 0;
 
@@ -548,7 +548,7 @@ int prioridadeOperador(char p){
     return pri;
 }
 
-/**Função que retorna resultado de operações parciais**/
+/**FunÃ§Ã£o que retorna resultado de operaÃ§Ãµes parciais**/
 double Operacao(double num1, double num2, char operacao){
     double resultado;
 
@@ -573,7 +573,7 @@ double Operacao(double num1, double num2, char operacao){
     return resultado;
 }
 
-/**Função que retorna forma posfixa de expressao infixa**/
+/**FunÃ§Ã£o que retorna forma posfixa de expressao infixa**/
 int posfixaEq(t_lista *exp){
     t_pilha *operadores = criarPilha();
     t_lista *posfixa = criarLista();
@@ -630,7 +630,7 @@ int posfixaEq(t_lista *exp){
 
 }
 
-/**Função que calcula resultado da expressao na forma posfixa**/
+/**FunÃ§Ã£o que calcula resultado da expressao na forma posfixa**/
 double calcPos(t_lista *pos){
     t_elemento *atual = pos->primeiro;
     t_pilha *resultado = criarPilha();
